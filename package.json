@@ -1,5 +1,5 @@
 {
-  "name": "clean",
+  "name": "var-clean",
   "version": "1.0.0",
   "description": "clean variable",
   "main": "index.js",

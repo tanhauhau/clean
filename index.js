@@ -53,7 +53,7 @@ module.exports = {
             }else if(value === false || value === 'false'){
                 return false;
             }
-            throw new Error("Not boolean type");
+            throw new Error("Not a Boolean");
         },
         cleanTruthy: function(value){
             if(value === true || value === 'true'){
@@ -67,7 +67,7 @@ module.exports = {
             if(/^[-]?\d+$/.test(value)){
                 return Number(value);
             }
-            throw new Error("Not a number");
+            throw new Error("Not a Number");
         },
         cleanPositiveInteger: function(value){
             if(/^[-]?\d+$/.test(value)){
@@ -78,20 +78,20 @@ module.exports = {
                     throw new Error("Negative number");
                 }
             }
-            throw new Error("Not a number");
+            throw new Error("Not a Number");
         },
         cleanString: function(value){
             var v;
             if((v = String(value)) !== '[object Object]'){
                 return v;
             }
-            throw new Error("Object not string");
+            throw new Error("Not a String");
         },
         cleanOnlyString: function(value){
             if(typeof value === 'string'){
                 return value;
             }
-            throw new Error("Object not string")
+            throw new Error("Not a String")
         }
     }
 };

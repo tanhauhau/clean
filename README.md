@@ -1,4 +1,4 @@
-# var-clean
+# var-clean [![Build Status](https://travis-ci.org/tanhauhau/clean.svg?branch=master)](https://travis-ci.org/tanhauhau/clean)
 
 Simple JavaScript library that clean variable
 

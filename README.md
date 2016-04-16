@@ -1,4 +1,4 @@
-# var-clean [![Build Status](https://travis-ci.org/tanhauhau/clean.svg?branch=master)](https://travis-ci.org/tanhauhau/clean)
+# var-clean [![Build Status](https://travis-ci.org/tanhauhau/var-clean.svg?branch=master)](https://travis-ci.org/tanhauhau/var-clean)
 
 Simple JavaScript library that clean variable
 
@@ -34,7 +34,7 @@ value | cleanBoolean | cleanTruthy | cleanInteger | cleanPositiveInteger | clean
 `'false'` | `false` | `false` | `undefined` | `undefined` | `'false'` | `'false'`
 `{}` | `undefined` | `true` | `undefined` | `undefined` | `undefined` | `undefined`
 `{ipsum: 'lorem'}` | `undefined` | `true` | `undefined` | `undefined` | `undefined` | `undefined`
-'lorem'` | `undefined` | `true` | `undefined` | `undefined` | `'lorem'` | `'lorem'`
+`'lorem'` | `undefined` | `true` | `undefined` | `undefined` | `'lorem'` | `'lorem'`
 `''` | `undefined` | `false` | `undefined` | `undefined` | `''` | `''`
 `1` | `undefined` | `true` | `1` | `1` | `'1'` | `undefined`
 `0` | `undefined` | `false` | `0` | `0` | `'0'` | `undefined`
@@ -56,7 +56,7 @@ value | cleanBoolean | cleanTruthy | cleanInteger | cleanPositiveInteger | clean
 `'false'` | `false` | `false` | `Not a Number` | `Not a Number` | `'false'` | `'false'`
 `{}` | `Not a Boolean` | `true` | `Not a Number` | `Not a Number` | `Not a String` | `Not a String`
 `{ipsum: 'lorem'}` | `Not a Boolean` | `true` | `Not a Number` | `Not a Number` | `Not a String` | `Not a String`
-'lorem'` | `Not a Boolean` | `true` | `Not a Number` | `Not a Number` | `'lorem'` | `'lorem'`
+`'lorem'` | `Not a Boolean` | `true` | `Not a Number` | `Not a Number` | `'lorem'` | `'lorem'`
 `''` | `Not a Boolean` | `false` | `Not a Number` | `Not a Number` | `''` | `''`
 `1` | `Not a Boolean` | `true` | `1` | `1` | `'1'` | `Not a String`
 `0` | `Not a Boolean` | `false` | `0` | `0` | `'0'` | `Not a String`

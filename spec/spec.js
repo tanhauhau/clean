@@ -97,4 +97,32 @@ describe("Clean", function() {
             }
         }
     });
+    it("undefined", function(){
+        expect(cl.cleanBoolean(undefined)).toBe(undefined);
+        expect(function(){ ct.cleanBoolean(undefined) }).toThrow();
+        expect(cl.cleanTruthy(undefined)).toBe(false);
+        expect(ct.cleanTruthy(undefined)).toBe(false);
+        expect(cl.cleanInteger(undefined)).toBe(undefined);
+        expect(function(){ ct.cleanInteger(undefined) }).toThrow();
+        expect(cl.cleanPositiveInteger(undefined)).toBe(undefined);
+        expect(function(){ ct.cleanPositiveInteger(undefined) }).toThrow();
+        expect(cl.cleanString(undefined)).toBe('undefined');
+        expect(ct.cleanString(undefined)).toBe('undefined');
+        expect(cl.cleanOnlyString(undefined)).toBe(undefined);
+        expect(function(){ ct.cleanOnlyString(undefined) }).toThrow();
+    });
+    it("null", function(){
+        expect(cl.cleanBoolean(null)).toBe(undefined);
+        expect(function(){ ct.cleanBoolean(null) }).toThrow();
+        expect(cl.cleanTruthy(null)).toBe(false);
+        expect(ct.cleanTruthy(null)).toBe(false);
+        expect(cl.cleanInteger(null)).toBe(undefined);
+        expect(function(){ ct.cleanInteger(null) }).toThrow();
+        expect(cl.cleanPositiveInteger(null)).toBe(undefined);
+        expect(function(){ ct.cleanPositiveInteger(undefined) }).toThrow();
+        expect(cl.cleanString(null)).toBe('null');
+        expect(ct.cleanString(null)).toBe('null');
+        expect(cl.cleanOnlyString(null)).toBe(undefined);
+        expect(function(){ ct.cleanOnlyString(null) }).toThrow();
+    });
 });

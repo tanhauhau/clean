@@ -42,6 +42,9 @@ value | cleanBoolean | cleanTruthy | cleanInteger | cleanPositiveInteger | clean
 `'153'` | `undefined` | `true` | `153` | `153` | `'153'` | `'153'`
 `-153` | `undefined` | `true` | `-153` | `undefined` | `'-153'` | `undefined`
 `'-153'` | `undefined` | `true` | `-153` | `undefined` | `-'153'` | `-'153'`
+`undefined` | `undefined` |  `false` |  `undefined` |  `undefined` |  `'undefined'` |  `undefined`
+`null` | `undefined` |  `false` |  `undefined` |  `undefined` |  `'null'` |  `undefined`
+
 
 ### cleanOrThrow
 
@@ -61,3 +64,5 @@ value | cleanBoolean | cleanTruthy | cleanInteger | cleanPositiveInteger | clean
 `'153'` | `Not a Boolean` | `true` | `153` | `153` | `'153'` | `'153'`
 `-153` | `Not a Boolean` | `true` | `-153` | `Negative number` | `'-153'` | `Not a String`
 `'-153'` | `Not a Boolean` | `true` | `-153` | `Negative number` | `-'153'` | `-'153'`
+`undefined` | `Not a Boolean` |  `false` |  `Not a Number` |  `Not a Number` |  `'undefined'` |  `Not a String`
+`null` | `Not a Boolean` |  `false` |  `Not a Number` |  `Not a Number` |  `'null'` |  `Not a String`

@@ -10,12 +10,12 @@ Usage:
 ----
 
 ```JavaScript
-var clean = requier('var-clean').clean;
+var clean = require('var-clean').clean;
 clean.cleanInteger(2);  //return 2
 clean.cleanInteger('2');  //return 2
 clean.cleanInteger('asdf');  //return undefined
 
-var cleanOrThrow = requier('var-clean').cleanOrThrow;
+var cleanOrThrow = require('var-clean').cleanOrThrow;
 cleanOrThrow.cleanInteger(2);  //return 2
 cleanOrThrow.cleanInteger('2');  //return 2
 cleanOrThrow.cleanInteger('asdf');  //throw Error 'Not a Number'
